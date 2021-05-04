@@ -1,0 +1,11 @@
+apiVersion: porter.sh/v1
+kind: AgentConfig
+metadata:
+  name: porter
+  namespace: {{ .Release.Namespace }}
+spec:
+  serviceAccount: porter-agent 
+  porterRepository: cnabquickstarts.azurecr.io/getporter/porter-agent
+  volumeSize: 1Gi
+  installationServiceAccount: porter-agent 
+  porterVersion: canary

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: porter
+  namespace: {{ .Release.Namespace }}
+  labels:
+    porter: "true"
+data:
+  serviceAccount: "porter-agent"
